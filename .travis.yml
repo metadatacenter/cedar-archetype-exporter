@@ -1,0 +1,15 @@
+language: java
+jdk:
+- oraclejdk8
+branches:
+  only:
+  - develop
+notifications:
+  email:
+    recipients:
+    - martin.oconnor@stanford.edu
+    on_success: never
+    on_failure: always
+install: '[ ${TRAVIS_PULL_REQUEST} = ''false'' ] && mvn -U install --settings .m2/travis-settings.xml'
+env:
+  global:
