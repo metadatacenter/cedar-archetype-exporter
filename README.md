@@ -2,6 +2,7 @@ CEDAR Archetype Exporter
 ========================
 
 [![Build Status](https://travis-ci.org/metadatacenter/cedar-archetype-exporter.svg?branch=master)](https://travis-ci.org/metadatacenter/cedar-archetype-exporter)
+[![Dependency Status](https://www.versioneye.com/user/projects/57106488fcd19a0039f16fbf/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57106488fcd19a0039f16fbf)
 
 #### Intructions
 
