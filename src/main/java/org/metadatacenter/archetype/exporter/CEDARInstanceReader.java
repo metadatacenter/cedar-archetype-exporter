@@ -1,20 +1,21 @@
 package org.metadatacenter.archetype.exporter;
 
-import generated.TypeAttribute;
-import generated.TypeBioSample;
-import generated.TypeBioSampleIdentifier;
-import generated.TypeContactInfo;
-import generated.TypeName;
-import generated.TypeOrganization;
-import generated.TypeSubmission;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import javax.xml.datatype.DatatypeConfigurationException;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
 
 public class CEDARInstanceReader
 {
   public static void main(String[] argc) throws IOException, DatatypeConfigurationException
   {
+    ObjectMapper mapper = new ObjectMapper();
+
     // Open the JSON file containing the CEDAR template instance
-    File submissionInstanceJSONFile = new File(CEDARInstanceReaader.class.getClassLoader()
-      .getResource("./json/NCBIBioSampleSubmissionInstance1.json").getFile());
+    File submissionInstanceJSONFile = new File(
+      CEDARInstanceReader.class.getClassLoader().getResource("./json/NCBIBioSampleSubmissionInstance1.json").getFile());
 
     // Read the instance into the JSONSchema2POJO-generated Java class
     NCBIBioSampleSubmissionTemplate bioSampleSubmissionInstance = mapper
@@ -23,40 +24,40 @@ public class CEDARInstanceReader
     // Nagivate through the Java instance and print out its property values
     NCBISubmissionDescription ncbiSubmissionDescription = bioSampleSubmissionInstance.getNCBISubmissionDescription();
 
-    (ncbiSubmissionDescription.getComment().getValue());
-    (ncbiSubmissionDescription.getReleaseDate().getValue());
+    System.out.println("Comment: " + ncbiSubmissionDescription.getComment().getValue());
+    System.out.println("Release Date: " + ncbiSubmissionDescription.getReleaseDate().getValue());
 
     NCBIOrganization ncbiOrganization = ncbiSubmissionDescription.getNCBIOrganization();
-    setOrganizationName(ncbiOrganization.getInstitutionName().getValue());
+    System.out.println("Institution Name: " + ncbiOrganization.getInstitutionName().getValue());
 
     NCBIContact ncbiContact = ncbiOrganization.getNCBIContact();
-    (ncbiContact.getEmail().getValue());
+    System.out.println("Email: " + ncbiContact.getEmail().getValue());
 
     NCBIName ncbiName = ncbiContact.getNCBIName();
-    (ncbiName.getFirstName().getValue();
-    (ncbiName.getMiddleInitial().getValue());
-    (ncbiName.getLastName().getValue());
+    System.out.println("First Name: " + ncbiName.getFirstName().getValue());
+    System.out.println("Middle Initial: " + ncbiName.getMiddleInitial().getValue());
+    System.out.println("Last Name: " + ncbiName.getLastName().getValue());
 
     BioSample bioSample = bioSampleSubmissionInstance.getBioSample();
-    (bioSample.getBioProjectID().getValue());
-    (bioSample.getPackage().getValue());
+    System.out.println("BioProject ID: " + bioSample.getBioProjectID().getValue());
+    System.out.println("Package: " + bioSample.getPackage().getValue());
 
     BioSampleSampleID bioSampleSampleID = bioSample.getBioSampleSampleID();
-    (bioSampleSampleID.getLabel().getValue());
+    System.out.println("Label : " + bioSampleSampleID.getLabel().getValue());
     System.out.println("Display: " + bioSampleSampleID.getDisplay().getValue());
 
     NCBISPUID ncbiSPUID = bioSampleSampleID.getNCBISPUID();
-    (ncbiSPUID.getSubmitterID().getValue());
+    System.out.println("Submitter ID: " + ncbiSPUID.getSubmitterID().getValue());
     System.out.println("Namespace: " + ncbiSPUID.getNamespace().getValue());
     System.out.println("Value: " + ncbiSPUID.getValue().getValue());
 
     BioSampleDescriptor bioSampleDescriptor = bioSample.getBioSampleDescriptor();
-    (bioSampleDescriptor.getTitle().getValue());
-    (bioSampleDescriptor.getDescription().getValue());
-    (bioSampleDescriptor.getExternalLink().getValue());
+    System.out.println("Title: " + bioSampleDescriptor.getTitle().getValue());
+    System.out.println("Description: " + bioSampleDescriptor.getDescription().getValue());
+    System.out.println("External Link: " + bioSampleDescriptor.getExternalLink().getValue());
 
     NCBIOrganism ncbiOrganism = bioSample.getNCBIOrganism();
-    (ncbiOrganism.getOrganismName().getValue());
+    System.out.println("Organism Name: " + ncbiOrganism.getOrganismName().getValue());
     System.out.println("Label: " + ncbiOrganism.getLabel().getValue());
     System.out.println("Strain: " + ncbiOrganism.getStrain().getValue());
     System.out.println("Isolate Name: " + ncbiOrganism.getIsolateName().getValue());
@@ -64,19 +65,19 @@ public class CEDARInstanceReader
     System.out.println("Cultivar: " + ncbiOrganism.getCultivar().getValue());
 
     BioSamplePathogenCl10Attributes bioSamplePathogenCl10Attributes = bioSample.getBioSamplePathogenCl10Attributes();
-    ("Strain", bioSamplePathogenCl10Attributes.getStrain().getValue());
-    ("Collection Date", bioSamplePathogenCl10Attributes.getCollectionDate().getValue());
-    ("Collected By", bioSamplePathogenCl10Attributes.getCollectedBy().getValue());
-    ("GEO Location Name", bioSamplePathogenCl10Attributes.getGEOLocationName().getValue());
-    ("Isolation Source", bioSamplePathogenCl10Attributes.getIsolationSource().getValue());
-    ("Latitude/longitude", bioSamplePathogenCl10Attributes.getLatitudeLongitude().getValue());
-    ("Host", bioSamplePathogenCl10Attributes.getHost().getValue());
-    ("Host Disease", bioSamplePathogenCl10Attributes.getHostDisease().getValue());
+    System.out.println("Strain: " + bioSamplePathogenCl10Attributes.getStrain().getValue());
+    System.out.println("Collection Date: " + bioSamplePathogenCl10Attributes.getCollectionDate().getValue());
+    System.out.println("Collected By: " + bioSamplePathogenCl10Attributes.getCollectedBy().getValue());
+    System.out.println("GEO Location Name:" + bioSamplePathogenCl10Attributes.getGEOLocationName().getValue());
+    System.out.println("Isolation Source: " + bioSamplePathogenCl10Attributes.getIsolationSource().getValue());
+    System.out.println("Latitude/longitude:" + bioSamplePathogenCl10Attributes.getLatitudeLongitude().getValue());
+    System.out.println("Host: " + bioSamplePathogenCl10Attributes.getHost().getValue());
+    System.out.println("Host Disease: " + bioSamplePathogenCl10Attributes.getHostDisease().getValue());
 
     List<BioSampleAttribute> bioSampleAttributes = bioSample.getBioSampleAttribute();
     for (BioSampleAttribute bioSampleAttribute : bioSampleAttributes) {
-      (bioSampleAttribute.getAttributeName().getValue(),
-        bioSampleAttribute.getAttributeValue().getValue());
+      System.out.println("Attribute Name: " + bioSampleAttribute.getAttributeName().getValue());
+      System.out.println("Attribute Value: " + bioSampleAttribute.getAttributeValue().getValue());
     }
   }
 }
