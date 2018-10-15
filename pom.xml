@@ -9,14 +9,14 @@
   
   <groupId>org.metadatacenter</groupId>
   <artifactId>cedar-archetype-exporter</artifactId>
-  <version>2.1.7-SNAPSHOT</version>
+  <version>2.1.7</version>
   <packaging>jar</packaging>
 
   <scm>
     <connection>scm:git:git@github.com:metadatacenter/cedar-archetype-exporter.git</connection>
     <developerConnection>scm:git:git@github.com:metadatacenter/cedar-archetype-exporter.git</developerConnection>
     <url>https://github.com/metadatacenter/cedar-archetype-exporter</url>
-    <tag>HEAD</tag>
+    <tag>release-2.1.7</tag>
   </scm>
 
   <dependencies>
