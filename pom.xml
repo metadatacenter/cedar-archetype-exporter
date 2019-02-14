@@ -16,7 +16,6 @@
     <connection>scm:git:git@github.com:metadatacenter/cedar-archetype-exporter.git</connection>
     <developerConnection>scm:git:git@github.com:metadatacenter/cedar-archetype-exporter.git</developerConnection>
     <url>https://github.com/metadatacenter/cedar-archetype-exporter</url>
-    <tag>release-2.2.8</tag>
   </scm>
 
   <dependencies>
