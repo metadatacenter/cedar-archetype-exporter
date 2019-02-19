@@ -12,7 +12,7 @@
   "_ui": {
     "pages": [],
     "order": [
-      "nCBISubmissionDescription",
+      "NCBISubmissionDescription",
       "bioSample"
     ]
   },
@@ -34,9 +34,9 @@
             "https://schema.metadatacenter.org/core/"
           ]
         },
-        "nCBISubmissionDescription": {
+        "NCBISubmissionDescription": {
           "enum": [
-            "https://schema.metadatacenter.net/properties/nCBISubmissionDescription"
+            "https://schema.metadatacenter.net/properties/NCBISubmissionDescription"
           ]
         },
         "bioSample": {
@@ -47,7 +47,7 @@
       },
       "required": [
         "_value",
-        "nCBISubmissionDescription",
+        "NCBISubmissionDescription",
         "bioSample"
       ],
       "additionalProperties": false
@@ -93,7 +93,7 @@
     "cedar:lastUpdatedBy": {
        "type": "string", "format": "uri"
     },
-    "nCBISubmissionDescription": {
+    "NCBISubmissionDescription": {
       "@id": "https://repo.metadatacenter.net/template-elements/dc20de28-e998-418f-936a-3cbb995adaa8",
       "@type": "https://schema.metadatacenter.org/core/TemplateElement",
       "@context": {
@@ -107,7 +107,7 @@
         "order": [
           "comment",
           "releaseDate",
-          "nCBIOrganization"
+          "NCBIOrganization"
         ]
       },
       "properties": {
@@ -123,9 +123,9 @@
                 "https://schema.metadatacenter.net/properties/releaseDate"
               ]
             },
-            "nCBIOrganization": {
+            "NCBIOrganization": {
               "enum": [
-                "https://schema.metadatacenter.net/properties/nCBIOrganization"
+                "https://schema.metadatacenter.net/properties/NCBIOrganization"
               ]
             }
           },
@@ -133,7 +133,7 @@
             "_value",
             "comment",
             "releaseDate",
-            "nCBIOrganization"
+            "NCBIOrganization"
           ],
           "additionalProperties": false
         },
@@ -285,7 +285,7 @@
             "domId": "id08858387883556107"
           }
         },
-        "nCBIOrganization": {
+        "NCBIOrganization": {
           "@id": "https://repo.metadatacenter.net/template-elements/dd615ed4-fbba-4750-a8c2-252d2355fe36",
           "@type": "https://schema.metadatacenter.org/core/TemplateElement",
           "@context": {
@@ -298,7 +298,7 @@
           "_ui": {
             "order": [
               "institutionName",
-              "nCBIContact"
+              "NCBIContact"
             ]
           },
           "properties": {
@@ -314,9 +314,9 @@
                     "https://schema.metadatacenter.net/properties/emailAddress"
                   ]
                 },
-                "nCBIContact": {
+                "NCBIContact": {
                   "enum": [
-                    "https://schema.metadatacenter.net/properties/nCBIContact"
+                    "https://schema.metadatacenter.net/properties/NCBIContact"
                   ]
                 }
               },
@@ -324,7 +324,7 @@
                 "_value",
                 "institutionName",
                 "emailAddress",
-                "nCBIContact"
+                "NCBIContact"
               ],
               "additionalProperties": false
             },
@@ -414,7 +414,7 @@
                 "domId": "id09373711790596158"
               }
             },
-            "nCBIContact": {
+            "NCBIContact": {
               "@id": "https://repo.metadatacenter.net/template-elements/bd562771-0a59-45e3-83d6-086eff6060d6",
               "@type": "https://schema.metadatacenter.org/core/TemplateElement",
               "@context": {
@@ -427,7 +427,7 @@
               "_ui": {
                 "order": [
                   "email",
-                  "nCBIName"
+                  "NCBIName"
                 ]
               },
               "properties": {
@@ -438,16 +438,16 @@
                         "https://schema.metadatacenter.net/properties/email"
                       ]
                     },
-                    "nCBIName": {
+                    "NCBIName": {
                       "enum": [
-                        "https://schema.metadatacenter.net/properties/nCBIName"
+                        "https://schema.metadatacenter.net/properties/NCBIName"
                       ]
                     }
                   },
                   "required": [
                     "_value",
                     "email",
-                    "nCBIName"
+                    "NCBIName"
                   ],
                   "additionalProperties": false
                 },
@@ -537,7 +537,7 @@
                     "domId": "id0053696676934019694"
                   }
                 },
-                "nCBIName": {
+                "NCBIName": {
                   "@id": "https://repo.metadatacenter.net/template-elements/6fc7d7d0-4a83-4d04-aaf8-1b582b082578",
                   "@type": "https://schema.metadatacenter.org/core/TemplateElement",
                   "@context": {
@@ -860,7 +860,7 @@
           "package",
           "bioSampleSampleID",
           "bioSampleDescriptor",
-          "nCBIOrganism",
+          "NCBIOrganism",
           "bioSamplePathogenCl10Attributes",
           "bioSampleAttribute"
         ]
@@ -878,9 +878,9 @@
                 "https://schema.metadatacenter.net/properties/bioSampleDescriptor"
               ]
             },
-            "nCBIOrganism": {
+            "NCBIOrganism": {
               "enum": [
-                "https://schema.metadatacenter.net/properties/nCBIOrganism"
+                "https://schema.metadatacenter.net/properties/NCBIOrganism"
               ]
             },
             "bioProjectID": {
@@ -908,7 +908,7 @@
             "_value",
             "bioSampleSampleID",
             "bioSampleDescriptor",
-            "nCBIOrganism",
+            "NCBIOrganism",
             "bioProjectID",
             "package",
             "bioSamplePathogenCl10Attributes",
@@ -1704,7 +1704,7 @@
             "domId": "id06223200787933929"
           }
         },
-        "nCBIOrganism": {
+        "NCBIOrganism": {
           "@id": "https://repo.metadatacenter.net/template-elements/fecd4b87-08bf-431f-8386-0c90f9e7f555",
           "@type": "https://schema.metadatacenter.org/core/TemplateElement",
           "@context": {
@@ -2311,7 +2311,7 @@
               "strain",
               "collectionDate",
               "collectedBy",
-              "gEOLocationName",
+              "GEOLocationName",
               "isolationSource",
               "latitude/Longitude",
               "host",
@@ -2341,9 +2341,9 @@
                     "https://schema.metadatacenter.net/properties/collectedBy"
                   ]
                 },
-                "gEOLocationName": {
+                "GEOLocationName": {
                   "enum": [
-                    "https://schema.metadatacenter.net/properties/gEOLocationName"
+                    "https://schema.metadatacenter.net/properties/GEOLocationName"
                   ]
                 },
                 "isolationSource": {
@@ -2373,7 +2373,7 @@
                 "65e30639-90ae-4fdd-a142-e17523b66bdc",
                 "collectionDate",
                 "collectedBy",
-                "gEOLocationName",
+                "GEOLocationName",
                 "isolationSource",
                 "latitude/Longitude",
                 "host",
@@ -2590,7 +2590,7 @@
                 "domId": "id013459937647210762"
               }
             },
-            "gEOLocationName": {
+            "GEOLocationName": {
               "@type": "https://schema.metadatacenter.org/core/TemplateField",
               "@context": {
                 "pav": "http://purl.org/pav/",
