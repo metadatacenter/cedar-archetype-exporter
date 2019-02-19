@@ -10,9 +10,7 @@ This project provides an archetype for a CEDAR exporter. It shows how
 the [JSONSchema2POJO library](http://www.jsonschema2pojo.org/) can be used to generate
 Java classes that process the content of CEDAR metadata instances.
 
-These instances can then be transformed into a submission format required by a particular
-repository.  See, for example, the [CEDAR BioSample Exporter](https://github.com/metadatacenter/biosample-exporter) for an example
-of an exporter that generates an XML-based BioSample submission.
+These instances can then be transformed into a submission format required by a particular repository. 
 
 This project contains a prototype CEDAR-generated template called ```NCBIBioSampleSubmissionTemplate.json```,
 which is located in the ```./src/main/resources/json-schema``` directory, and a CEDAR-generated
@@ -27,7 +25,7 @@ then prints out its contents.
 
 To build this library you must have the following items installed:
 
-+ [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
++ [Java 11](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 + A tool for checking out a [Git](http://git-scm.com/) repository.
 + Apache's [Maven](http://maven.apache.org/index.html).
 

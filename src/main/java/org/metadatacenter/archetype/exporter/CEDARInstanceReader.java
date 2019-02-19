@@ -21,7 +21,7 @@ public class CEDARInstanceReader
     NCBIBioSampleSubmissionTemplate bioSampleSubmissionInstance = mapper
       .readValue(submissionInstanceJSONFile, NCBIBioSampleSubmissionTemplate.class);
 
-    // Nagivate through the Java instance and print out its property values
+    // Navigate through the Java instance and print out its property values
     //NCBISubmissionDescription ncbiSubmissionDescription = bioSampleSubmissionInstance.getNCBISubmissionDescription();
     NCBISubmissionDescription ncbiSubmissionDescription = bioSampleSubmissionInstance.getNCBISubmissionDescription();
 
