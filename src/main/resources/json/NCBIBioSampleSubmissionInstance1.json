@@ -1,16 +1,16 @@
 {
   "@context": {
     "_value": "https://schema.org/value",
-    "nCBISubmissionDescription": "https://schema.metadatacenter.net/properties/nCBISubmissionDescription",
+    "NCBISubmissionDescription": "https://schema.metadatacenter.net/properties/NCBISubmissionDescription",
     "bioSample": "https://schema.metadatacenter.net/properties/bioSample",
     "pav": "http://purl.org/pav/",
     "cedar": "https://schema.metadatacenter.org/core/"
   },
-  "nCBISubmissionDescription": {
+  "NCBISubmissionDescription": {
     "@context": {
       "comment": "https://schema.metadatacenter.net/properties/comment",
       "releaseDate": "https://schema.metadatacenter.net/properties/releaseDate",
-      "nCBIOrganization": "https://schema.metadatacenter.net/properties/nCBIOrganization"
+      "NCBIOrganization": "https://schema.metadatacenter.net/properties/NCBIOrganization"
     },
     "comment": {
       "_value": "Martin's first BioSample dummy submission"
@@ -18,24 +18,24 @@
     "releaseDate": {
       "_value": "04/08/2016 9:45 AM"
     },
-    "nCBIOrganization": {
+    "NCBIOrganization": {
       "@context": {
         "institutionName": "https://schema.metadatacenter.net/properties/institutionName",
         "emailAddress": "https://schema.metadatacenter.net/properties/emailAddress",
-        "nCBIContact": "https://schema.metadatacenter.net/properties/nCBIContact"
+        "NCBIContact": "https://schema.metadatacenter.net/properties/NCBIContact"
       },
       "institutionName": {
         "_value": "an institution"
       },
-      "nCBIContact": {
+      "NCBIContact": {
         "@context": {
           "email": "https://schema.metadatacenter.net/properties/email",
-          "nCBIName": "https://schema.metadatacenter.net/properties/nCBIName"
+          "NCBIName": "https://schema.metadatacenter.net/properties/NCBIName"
         },
         "email": {
           "_value": "fred@bob.com"
         },
-        "nCBIName": {
+        "NCBIName": {
           "@context": {
             "firstName": "https://schema.metadatacenter.net/properties/firstName",
             "middleInitial": "https://schema.metadatacenter.net/properties/middleInitial",
@@ -58,7 +58,7 @@
     "@context": {
       "bioSampleSampleID": "https://schema.metadatacenter.net/properties/bioSampleSampleID",
       "bioSampleDescriptor": "https://schema.metadatacenter.net/properties/bioSampleDescriptor",
-      "nCBIOrganism": "https://schema.metadatacenter.net/properties/nCBIOrganism",
+      "NCBIOrganism": "https://schema.metadatacenter.net/properties/NCBIOrganism",
       "bioProjectID": "https://schema.metadatacenter.net/properties/bioProjectID",
       "package": "https://schema.metadatacenter.net/properties/package",
       "bioSamplePathogenCl10Attributes": "https://schema.metadatacenter.net/properties/bioSamplePathogenCl10Attributes",
@@ -112,7 +112,7 @@
         "_value": "http://cnn.com"
       }
     },
-    "nCBIOrganism": {
+    "NCBIOrganism": {
       "@context": {
         "organismName": "https://schema.metadatacenter.net/properties/organismName",
         "label": "https://schema.metadatacenter.net/properties/label",
@@ -152,7 +152,7 @@
         "65e30639-90ae-4fdd-a142-e17523b66bdc": "https://schema.metadatacenter.net/properties/65e30639-90ae-4fdd-a142-e17523b66bdc",
         "collectionDate": "https://schema.metadatacenter.net/properties/collectionDate",
         "collectedBy": "https://schema.metadatacenter.net/properties/collectedBy",
-        "gEOLocationName": "https://schema.metadatacenter.net/properties/gEOLocationName",
+        "GEOLocationName": "https://schema.metadatacenter.net/properties/GEOLocationName",
         "isolationSource": "https://schema.metadatacenter.net/properties/isolationSource",
         "latitude/Longitude": "https://schema.metadatacenter.net/properties/latitude/Longitude",
         "host": "https://schema.metadatacenter.net/properties/host",
@@ -167,7 +167,7 @@
       "collectedBy": {
         "_value": "collected by attribute value"
       },
-      "gEOLocationName": {
+      "GEOLocationName": {
         "_value": "GEO attribute value"
       },
       "isolationSource": {

@@ -21,7 +21,8 @@ public class CEDARInstanceReader
     NCBIBioSampleSubmissionTemplate bioSampleSubmissionInstance = mapper
       .readValue(submissionInstanceJSONFile, NCBIBioSampleSubmissionTemplate.class);
 
-    // Nagivate through the Java instance and print out its property values
+    // Navigate through the Java instance and print out its property values
+    //NCBISubmissionDescription ncbiSubmissionDescription = bioSampleSubmissionInstance.getNCBISubmissionDescription();
     NCBISubmissionDescription ncbiSubmissionDescription = bioSampleSubmissionInstance.getNCBISubmissionDescription();
 
     System.out.println("Comment: " + ncbiSubmissionDescription.getComment().getValue());
@@ -46,7 +47,7 @@ public class CEDARInstanceReader
     System.out.println("Label : " + bioSampleSampleID.getLabel().getValue());
     System.out.println("Display: " + bioSampleSampleID.getDisplay().getValue());
 
-    NCBISPUID ncbiSPUID = bioSampleSampleID.getNCBISPUID();
+    Ncbispuid ncbiSPUID = bioSampleSampleID.getnCBISPUID();
     System.out.println("Submitter ID: " + ncbiSPUID.getSubmitterID().getValue());
     System.out.println("Namespace: " + ncbiSPUID.getNamespace().getValue());
     System.out.println("Value: " + ncbiSPUID.getValue().getValue());
